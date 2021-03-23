@@ -21,10 +21,16 @@ moyenne_maths_eleve1 = notes_maths_eleve1/3
 print("La moyenne en maths de l'elève 1 est de",moyenne_maths_eleve1)
 
 # 4.c
-def moyenne_tuples(eleve, matiere, valeur):
-  
-  return
+def moyenne_tuples(notes, eleve, matiere):
+  res = [item for item in notes if item[0] == eleve]
+  res1 = [item for item in notes if item[1] == matiere]
+  print(res)
+  print(res1)
+  return sum([x[2] for x in res1])/(len(res1))
 
+print("La moyenne 1 est",moyenne_tuples(notes, "eleve1","math"))
+print("La moyenne 2 est",moyenne_tuples(notes, "eleve1","eco"))
+print("La moyenne 3 est",moyenne_tuples(notes, "eleve2","math"))
 
 #### 
 class Note:
@@ -44,5 +50,7 @@ print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
 
+def __str__(self):
+  return print(Note) #ce que vous voulez afficher"
 
 
