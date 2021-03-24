@@ -1,12 +1,12 @@
-================================================ test session starts ================================================
+============================= test session starts ==============================
 platform linux -- Python 3.9.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
 rootdir: /home/stidsem4/iut/2021/controle/estelle.li/c16_03
 collected 7 items
 
-test_16_03.py F.FFFFF                                                                                         [100%]
+test_16_03.py F.FFFFF                                                    [100%]
 
-===================================================== FAILURES ======================================================
-_______________________________________________ Test1603sute.test_10 ________________________________________________
+=================================== FAILURES ===================================
+_____________________________ Test1603sute.test_10 _____________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 
@@ -37,7 +37,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_10>
 E           AssertionError: assert False
 
 test_16_03.py:100: AssertionError
------------------------------------------------ Captured stdout call ------------------------------------------------
+----------------------------- Captured stdout call -----------------------------
 [('eleve1', 'math', 13), ('eleve1', 'physique', 15), ('eleve1', 'math', 13), ('eleve1', 'eco', 12), ('eleve1', 'eco', 13), ('eleve1', 'math', 12), ('eleve2', 'math', 13), ('eleve2', 'math', 14)]
 La moyenne de l'elève 1 est de 13.0
 La moyenne en maths de l'elève 1 est de 12.666666666666666
@@ -54,7 +54,7 @@ eleve1
 maths
 13
 eleve eleve1 matiere maths note 13
-________________________________________________ Test1603sute.test_4 ________________________________________________
+_____________________________ Test1603sute.test_4 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_4>
 
@@ -95,7 +95,7 @@ E               AssertionError: moyenne_tuples non définie
 E               assert False
 
 test_16_03.py:21: AssertionError
-________________________________________________ Test1603sute.test_5 ________________________________________________
+_____________________________ Test1603sute.test_5 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 
@@ -118,7 +118,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_5>
 E           AssertionError: assert False
 
 test_16_03.py:35: AssertionError
-________________________________________________ Test1603sute.test_6 ________________________________________________
+_____________________________ Test1603sute.test_6 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
 
@@ -127,7 +127,7 @@ self = <c16_03.test_16_03.Test1603sute testMethod=test_6>
 E       ImportError: cannot import name 'onotes' from 'c16_03.main' (/home/stidsem4/iut/2021/controle/estelle.li/c16_03/main.py)
 
 test_16_03.py:41: ImportError
-________________________________________________ Test1603sute.test_8 ________________________________________________
+_____________________________ Test1603sute.test_8 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_8>
 
@@ -180,7 +180,7 @@ E               AssertionError: La fonction moyenne_notes n'est pas définie
 E               assert False
 
 test_16_03.py:76: AssertionError
-________________________________________________ Test1603sute.test_9 ________________________________________________
+_____________________________ Test1603sute.test_9 ______________________________
 
 self = <c16_03.test_16_03.Test1603sute testMethod=test_9>
 
@@ -194,11 +194,11 @@ E       AssertionError: assert False
 E        +  where False = hasattr(<class 'c16_03.main.Note'>, 'instances')
 
 test_16_03.py:90: AssertionError
-============================================== short test summary info ==============================================
+=========================== short test summary info ============================
 FAILED test_16_03.py::Test1603sute::test_10 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_4 - AssertionError: moyenne_tuples non définie
+FAILED test_16_03.py::Test1603sute::test_4 - AssertionError: moyenne_tuples n...
 FAILED test_16_03.py::Test1603sute::test_5 - AssertionError: assert False
-FAILED test_16_03.py::Test1603sute::test_6 - ImportError: cannot import name 'onotes' from 'c16_03.main' (/home/st...
-FAILED test_16_03.py::Test1603sute::test_8 - AssertionError: La fonction moyenne_notes n'est pas définie
+FAILED test_16_03.py::Test1603sute::test_6 - ImportError: cannot import name ...
+FAILED test_16_03.py::Test1603sute::test_8 - AssertionError: La fonction moye...
 FAILED test_16_03.py::Test1603sute::test_9 - AssertionError: assert False
-============================================ 6 failed, 1 passed in 0.10s ============================================
+========================= 6 failed, 1 passed in 0.10s ==========================
