@@ -53,11 +53,12 @@ Note.afficher(onote)
 
 onotes = []
 question5 = [n1 for n1 in notes if onotes.append(Note(n1[0],n1[1],n1[2]))]
-print(question5)
+print("Afficher",question5)
 
 # 6. 
 def __str__(self):
-  return print(onote)
+  return print('eleve :', self.eleve, ', matiere :', self.matiere, ', note :', self.valeur)
+__str__(onote)
     
 # 7.
 
@@ -86,12 +87,16 @@ class Demo:
 
 demo1 = Demo(1)
 demo2 = Demo(2)
+demo12 = Demo(12)
 
 print(demo1.a)
 print(demo2.a)
+print(demo12.a)
+
 print(Demo.classattr)
 print(demo1.classattr)
 print(demo2.classattr)
+print(demo12.classattr)
 
 Demo.classattr = 23
 
@@ -102,9 +107,49 @@ demo1.classattr = -1
 
 print(Demo.classattr)
 print(demo1.classattr)
+
+demo2.classattr = 22
 print(demo2.classattr)
 
 Demo.classattr = 14
+
+demo12.classattr = 12
+print(demo12.classattr)
+
+
+# Question 9.
+aa = []
+class instances:
+  instances = []
+  def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
+    self.eleve = eleve
+    self.matiere = matiere
+    self.valeur = valeur
+    self = aa.append(self)
+
+  classattr = 'defaut'
+  def __init__(self, a):
+    self.a = a
+  
+  @classmethod #attention !
+  def default_len(cls):
+    return len(cls.classattr)
+
+# Question 10
+  @classmethod #attention !
+  def vider(cls):
+    cls.instances = []
+  
+
+print("Question9 : ", instances.default_len())
+print("Question10 : ", instances.vider())
+
+
+# Question 11
+
+
+# Question 12
+
 
 
 
