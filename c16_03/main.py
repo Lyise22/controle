@@ -131,12 +131,12 @@ class instances:
   def __init__(self, a):
     self.a = a
   
-  @classmethod #attention !
+  @classmethod
   def default_len(cls):
     return len(cls.classattr)
 
 # Question 10
-  @classmethod #attention !
+  @classmethod
   def vider(cls):
     cls.instances = []
   
