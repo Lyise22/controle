@@ -10,17 +10,17 @@ note8 = ('eleve2', 'math', 14)
 notes = [note1, note2, note3, note4, note5, note6,note7,note8]
 print(notes)
 
-# 4.a
+# Question 4.a
 notes_eleve1 = (note1[2]+note2[2]+note3[2]+note4[2]+note5[2]+note6[2])
 moyenne_eleve1 = notes_eleve1/6
-print("La moyenne de l'elève 1 est de",moyenne_eleve1)
+print("Question4a : La moyenne de l'elève 1 est de",moyenne_eleve1)
 
-# 4.b
+# Question 4.b
 notes_maths_eleve1 = (note1[2]+note3[2]+note6[2])
 moyenne_maths_eleve1 = notes_maths_eleve1/3
-print("La moyenne en maths de l'elève 1 est de",moyenne_maths_eleve1)
+print("Question4b : La moyenne en maths de l'elève 1 est de",moyenne_maths_eleve1)
 
-# 4.c
+# Question 4.c
 def moyenne_tuples(notes, eleve = None, matiere = None):
   res = [item for item in notes if item[0] == eleve] if eleve is not None else notes
   res1 = [item1 for item1 in res if item1[1] == matiere] if matiere is not None else res
@@ -28,12 +28,12 @@ def moyenne_tuples(notes, eleve = None, matiere = None):
   print(res1)
   return sum([x[2] for x in res1])/(len(res1))
 
-print("La moyenne de l'élève 1 en maths est",moyenne_tuples(notes, "eleve1","math"))
-print("La moyenne de l'élève 1 en eco est",moyenne_tuples(notes, "eleve1","eco"))
-print("La moyenne de l'élève 2 en maths est",moyenne_tuples(notes, "eleve2","math"))
+print("Question4c : La moyenne de l'élève 1 en maths est",moyenne_tuples(notes, "eleve1","math"))
+print("Question4c : La moyenne de l'élève 1 en eco est",moyenne_tuples(notes, "eleve1","eco"))
+print("Question4c : La moyenne de l'élève 2 en maths est",moyenne_tuples(notes, "eleve2","math"))
 
 #### 
-# 5.
+# Question 5.
 n = []
 class Note:
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
@@ -44,6 +44,10 @@ class Note:
 
   def afficher(self):
     return print('eleve :', self.eleve, ', matiere :', self.matiere, ', note :', self.valeur)
+  
+  # Question 6. 
+  def __str__(self):
+    return print('eleve :', self.eleve, ', matiere :', self.matiere, ', note :', self.valeur)
 
 onote = Note('eleve1', 'maths', 13)
 print(onote.eleve)
@@ -53,17 +57,15 @@ Note.afficher(onote)
 
 onotes = []
 question5 = [n1 for n1 in notes if onotes.append(Note(n1[0],n1[1],n1[2]))]
-print("Afficher",question5)
+print("Question5 : Afficher",question5)
 
-# 6. 
-def __str__(self):
-  return print('eleve :', self.eleve, ', matiere :', self.matiere, ', note :', self.valeur)
-__str__(onote)
+
+print("Question6 : Affiche",Note.__str__(onote))
     
-# 7.
+# Question 7.
 
 
-# 8.
+# Question 8.
 def moyenne_Notes(eleve = None, matiere = None):
   maliste = n
   b = []
@@ -75,7 +77,7 @@ def moyenne_Notes(eleve = None, matiere = None):
     moy = sum(b)/len(b)
     return moy
 
-print("La moyenne des Notes est", moyenne_Notes())
+print("Question8 : La moyenne des Notes est", moyenne_Notes())
 
 ###
 
@@ -83,7 +85,6 @@ class Demo:
   classattr = 'defaut'
   def __init__(self, a):
     self.a = a
-
 
 demo1 = Demo(1)
 demo2 = Demo(2)
@@ -121,13 +122,14 @@ print(demo12.classattr)
 aa = []
 class instances:
   instances = []
+  classattr = 'defaut'
+
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
     self.eleve = eleve
     self.matiere = matiere
     self.valeur = valeur
-    self = aa.append(self)
+    self.instances.append(self)
 
-  classattr = 'defaut'
   def __init__(self, a):
     self.a = a
   
